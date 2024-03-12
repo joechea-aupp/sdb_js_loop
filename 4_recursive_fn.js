@@ -1,13 +1,13 @@
-const loopMe = function (maxCount, counter = 0) {
-  if (counter < maxCount) {
-    // check if counter if less than maxCount
-    console.log(`This should run 10 times (${counter})`);
-    // return this function that has now have counter increase by one
-    return loopMe(maxCount, counter + 1);
-  }
-};
+// const loopMe = function (maxCount, counter = 0) {
+//   if (counter < maxCount) {
+//     // check if counter if less than maxCount
+//     console.log(`This should run 10 times (${counter})`);
+//     // return this function that has now have counter increase by one
+//     return loopMe(maxCount, counter + 1);
+//   }
+// };
 
-loopMe(10);
+// loopMe(10);
 
 // concept using callback function
 // const loopMe = function (maxCount, callback, counter = 0) {
@@ -23,12 +23,13 @@ loopMe(10);
 //   console.log(`This should run 10 times (${counter})`);
 // });
 
-// const calcPower = function (num, power = 1) {
-//   if (power !== 1) {
-//     return num * calcPower(num, power - 1);
-//   }
+const calcPower = function (num, power = 1) {
+  if (power !== 1) {
+    return num * calcPower(num, power - 1);
+  }
 
-//   return num;
-// };
+  return num;
+};
 
-// console.log(calcPower(2, 2));
+// console.log();
+calcPower(2, 3);
